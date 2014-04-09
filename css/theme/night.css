@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
 /**
- * Black theme for reveal.js.
+ * David Dark theme. Based on black theme for reveal.js.
  *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Black theme copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 /*********************************************
  * GLOBAL STYLES
@@ -13,16 +13,20 @@ body {
   background-color: #111111; }
 
 .reveal {
-  font-family: "Open Sans", sans-serif;
+  font-family:"Helvetica",Helvetica,Arial,sans-serif;
   font-size: 30px;
   font-weight: normal;
-  letter-spacing: -0.02em;
+  letter-spacing: 0em;
   color: #eeeeee; }
 
 ::selection {
   color: white;
   background: #e7ad52;
   text-shadow: none; }
+
+  .reveal .slides {
+    text-align: left;
+  }
 
 /*********************************************
  * HEADERS
@@ -35,14 +39,48 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eeeeee;
-  font-family: "Montserrat", Impact, sans-serif;
-  line-height: 0.9em;
-  letter-spacing: -0.03em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;   line-height: 0.9em;
+  letter-spacing: 0em;
   text-transform: none;
   text-shadow: none; }
 
-.reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+.reveal .sans-light {font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 100;}
+.reveal .sans-cond {font-family: "HelveticaNeue-Light-Condensed", "Helvetica Neue Light Condensed", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 100; letter-spacing:0.025em;}
+.reveal .sans-med {font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Medium", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;}
+.reveal .sans-condbold {font-family: "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "Helvetica Bold", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 700; letter-spacing:-0.075em;}
+.reveal .sans-bold {font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Bold", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 700;}
+
+.reveal .drophed {color:rgba(255, 255, 255, .60); font-family: "HelveticaNeue-Light-Condensed", "Helvetica Neue Light Condensed", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 100; font-size:0.4em; letter-spacing:0.1em;}
+.reveal .drophed .bold-ish {font-family: font-family: "HelveticaNeue-Medium-Condensed", "Helvetica Neue Medim Condensed", "Helvetica Medium", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 400; letter-spacing:0em;}
+
+
+/* .reveal h1 {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); } 
+*/
+
+hr {
+  margin-left: 0;
+  color:rgba(255, 255, 255, .60);
+}
+
+hr.line-top {
+  width: 30%;
+  height: 10px;
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+hr.line-bottom {
+  width: 30%;
+  height: .25px;
+  background-color: white;
+  margin-top: 40px;
+}
+
+hr.onwhite {
+  background-color: black;
+  width: 40%;
+}
 
 /*********************************************
  * LINKS
@@ -68,7 +106,7 @@ body {
 /*********************************************
  * IMAGES
  *********************************************/
-.reveal section img {
+/*.reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
   border: 4px solid #eeeeee;
@@ -77,43 +115,77 @@ body {
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
-  transition: all .2s linear; }
+  transition: all .2s linear; }*/
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #e7ad52;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
+.reveal .half-left-green {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-width: 50%;
+  height: 100vh;
+  background-color:#5D917D;
+  padding: 50px;
+}
+
+.reveal .half-left-test {
+  background-color:#fff;
+  padding:50px;
+  width:50%;
+}
+
+.reveal .half-smaller {
+  background-color:#fff;
+  padding:50px;
+  width:30%;
+}
+
+.reveal .half-left-test h1, h2, h3, h4, h5, h6, p {
+  color:black;
+}
+
+.reveal .onwhite {
+  color:black;
+}
+
+.reveal .reverse {
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8); } 
+}
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #e7ad52; }
+  border-right-color: rgba(255, 255, 255, 0.55); }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #e7ad52; }
+  border-left-color: rgba(255, 255, 255, 0.55); }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #e7ad52; }
+  border-bottom-color: rgba(255, 255, 255, 0.55); }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #e7ad52; }
+  border-top-color: rgba(255, 255, 255, 0.55); }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #f3d7ac; }
+  border-right-color: rgba(255, 255, 255, 0.85); }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #f3d7ac; }
+  border-left-color: rgba(255, 255, 255, 0.85); }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #f3d7ac; }
+  border-bottom-color: rgba(255, 255, 255, 0.85); }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #f3d7ac; }
+  border-top-color: rgba(255, 255, 255, 0.85); }
 
 /*********************************************
  * PROGRESS BAR
@@ -134,3 +206,7 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #e7ad52; }
+
+  /* more stuff */
+
+h1.huge { font-size:5em; }
